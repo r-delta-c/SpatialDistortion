@@ -3,6 +3,10 @@
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.0.1-exp.1] 2025/06/18
+### Changed
+- シェーダー名を変更。SpacialDistortion -> SpatialDistortion
+
 ## [0.0.0-exp.1] 2025/06/18
 ### Changed
 - ステレオレンダリング用の補正処理をDeltaField-Shader-CommonsにIncludeとして移行。
@@ -34,6 +38,6 @@ dev-1.0 限定公開 2025/02/26
 <!--
 ## [Unreleased]
 
-[Unreleased]: https://github.com/r-delta-c/SpacialDistortion/compare/0.0.0-exp.1...1.0.0
+[Unreleased]: https://github.com/r-delta-c/SpatialDistortion/compare/0.0.0-exp.1...1.0.0
 
 -->

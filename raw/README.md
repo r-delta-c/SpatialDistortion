@@ -7,7 +7,7 @@ Copyright (c) 2025, DeltaField
 Name: $name<br>
 Version: $version<br>
 
-Spacial DistortionはGrabPassを利用した様々な揺らぎを表現するシェーダーです。
+GrabPassを利用した様々な揺らぎを表現するシェーダーです。
 <br>
 以下の機能を特徴としています。
 * 放射状に展開されるノイズをベースに、プロシージャルな空間の揺らぎを描写。
@@ -68,7 +68,7 @@ GrabPass{
 
 ## How to Use | 使い方
 以下のページを参照してください。<br>
-[Properties | プロパティ](https://github.com/r-delta-c/SpacialDistortion/blob/main/Documentation~/properties.md "Documentation~/properties.md")
+[Properties | プロパティ](https://github.com/r-delta-c/SpatialDistortion/blob/main/Documentation~/properties.md "Documentation~/properties.md")
 
 ## License | ライセンス
 このシェーダーはMIT Licenseによって提供されます。

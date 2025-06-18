@@ -1,7 +1,7 @@
 {
-    "name": "com.deltafield.spacialdistortion",
-    "displayName": "SpacialDistortion",
-    "version": "0.0.0-exp.1",
+    "name": "com.deltafield.spatialdistortion",
+    "displayName": "SpatialDistortion",
+    "version": "0.0.1-exp.1",
     "unity": "2022.3",
     "description": "Warp space with GrabPass",
     "keywords": ["shader", "material", "hlsl", "vr", "xr", "grabpass"],

@@ -1,6 +1,4 @@
-// Upgrade NOTE: replaced 'glstate_matrix_projection' with 'UNITY_MATRIX_P'
-
-Shader "DeltaField/shaders/SpacialDistortion"{
+Shader "DeltaField/shaders/SpatialDistortion"{
     Properties{
         [Header(Rendering)]
         [Space(16)]

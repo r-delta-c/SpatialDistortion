@@ -1,5 +1,5 @@
 # Properties | プロパティ
-SpacialDistortionのプロパティ解説です。<br>
+SpatialDistortionのプロパティ解説です。<br>
 (独自のプロパティ以外の解説は省略します。)
 
 
