@@ -5,7 +5,7 @@ Copyright (c) 2025, DeltaField
 
 ## Overview | 概要
 Name: SpatialDistortion<br>
-Version: 0.0.1-exp.1<br>
+Version: <br>
 
 GrabPassを利用した様々な揺らぎを表現するシェーダーです。
 <br>
