@@ -10,7 +10,7 @@ SpatialDistortionのプロパティ解説です。<br>
 |Z Write|デプスバッファの書き込みを許可するかを指定します。|
 |Flip Texcoord(Feature)|Texcoord(UV)の反転ができます。|
 |Forced Z Scale Zero|モデルのZ方向のスケールを0にします。|
-|Particle Billboard Mode(Feature)|当シェーダーをパーティクルで使用する場合はこのプロパティにチェックを入れてください。<br>有効時、Particle Systemのカラー設定のアルファ値が、歪みの効果量の影響を受けるようになります。<br>これによりParticle Systemの設定に応じて柔軟な制御が可能です。|
+|Billboard Mode(Feature)|当シェーダーをパーティクルで使用する場合はOffにしてください。<br>無効時、Particle Systemのカラー設定のアルファ値が、歪みの効果量の影響を受けるようになります。<br>これによりParticle Systemの設定に応じて柔軟な制御が可能です。|
 |Stereo Merge Mode(Feature) | ステレオレンダリング時に左右のカメラの位置の中間を取って描写することができます。<br>`None` \| 何も平均化しません。<br>`Position` \| 座標を中間にします。左右で同じ位置に描写されるため、奥行きが分からなくなるような錯覚を受けます。<br>GrabPassを使用し、極端に景色を歪ませるような用途に対して利用すると、スレテオレンダリング時の描写の左右差を抑えることができる可能性があります。<br>`Rotation` \| 向きを中間にします。**Pimax**といった、左右のカメラで異なる向きを持つ特殊な描写環境に対して調整する目的で使用されます。<br>`Position_Rotation` \| 座標と向きを中間にします。|
 |Preview Mode(Feature)|主にデバッグ利用を想定した描写モードです。+の変化は赤に、-の変化は緑として表示されます。|
 

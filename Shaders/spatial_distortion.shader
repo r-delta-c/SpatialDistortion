@@ -10,8 +10,8 @@ Shader "DeltaField/shaders/SpatialDistortion"{
         [KeywordEnum(None,Flip X,Flip Y,Flip XY)]
         _FlipTexcoord("Flip Texcoord(Feature)",Float)=0.0
         [MaterialToggle]_Forced_Z_Scale_Zero("Forced Z Scale Zero",Float)=1.0
-        [Toggle(_DISABLE_CUSTOM_BILLBOARD)]
-        _DisableCustomBillBoard("Particle Billboard Mode(Feature)",Float)=0.0
+        [Toggle(_BILLBOARD_MODE)]
+        _BillboardMode("Billboard Mode(Feature)",Float)=0.0
         [KeywordEnum(None,Position,Rotation,Position_Rotation)]
         _StereoMergeMode("Stereo Merge Mode(Feature)",Int)=2
         [Toggle(_PREVIEW_MODE)]
@@ -93,7 +93,7 @@ Shader "DeltaField/shaders/SpatialDistortion"{
 
             #pragma shader_feature_local _FLIPTEXCOORD_NONE _FLIPTEXCOORD_FLIP_X _FLIPTEXCOORD_FLIP_Y _FLIPTEXCOORD_FLIP_XY
             #pragma shader_feature_local _ _PREVIEW_MODE
-            #pragma shader_feature_local _ _DISABLE_CUSTOM_BILLBOARD
+            #pragma shader_feature_local _ _BILLBOARD_MODE
             #pragma shader_feature_local _ _DISABLE_DIRTYNOISE
             #pragma shader_feature_local _ _DISABLE_CHROMATIC_A
             
@@ -182,13 +182,7 @@ Shader "DeltaField/shaders/SpatialDistortion"{
                 UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
 
                 float dist = 0.0;
-                #ifdef _DISABLE_CUSTOM_BILLBOARD
-                    o.alpha = v.color.a;
-                    o.vertex = mul(UNITY_MATRIX_M,v.vertex);
-                    o.distance_camera = max(CAMERA_DISTANCE_MACRO,1e-4);
-                    o.vertex = mul(DEFINE_STEREO_MERGE_MATRIX_V,o.vertex);
-                    o.vertex = mul(UNITY_MATRIX_P,o.vertex);
-                #else
+                #ifdef _BILLBOARD_MODE
                     o.alpha = 1.0;
                     float4x4 Stereo_Merge_Matrix_V = DEFINE_STEREO_MERGE_MATRIX_V;
                     float4x4 Billboard_Matrix_M = {
@@ -206,6 +200,12 @@ Shader "DeltaField/shaders/SpatialDistortion"{
                     o.vertex = mul(Billboard_Matrix_M,v.vertex);
                     o.distance_camera = max(CAMERA_DISTANCE_MACRO,1e-4);
                     o.vertex = mul(Stereo_Merge_Matrix_V,o.vertex);
+                    o.vertex = mul(UNITY_MATRIX_P,o.vertex);
+                #else
+                    o.alpha = v.color.a;
+                    o.vertex = mul(UNITY_MATRIX_M,v.vertex);
+                    o.distance_camera = max(CAMERA_DISTANCE_MACRO,1e-4);
+                    o.vertex = mul(DEFINE_STEREO_MERGE_MATRIX_V,o.vertex);
                     o.vertex = mul(UNITY_MATRIX_P,o.vertex);
                 #endif
 
