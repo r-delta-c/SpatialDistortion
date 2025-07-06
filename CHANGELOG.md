@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
     - KeywordName: `_DISABLE_CUSTOM_BILLBOARD` → `_BILLBOARD_MODE`
     - `True` | ビルボード描写が有効になります。
     - `False` | ビルボード描写にはならず通常の描写になります。
+- 環境要件にて要求されるパッケージ、`DeltaField-Shader-Commons`は`v1.0.0`が必要になります。それ以前のバージョンは使用できません。
 
 ## [0.0.1-exp.1] 2025/06/18
 ### Changed
