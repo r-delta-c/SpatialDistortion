@@ -5,7 +5,7 @@ Copyright (c) 2025, DeltaField
 
 ## Overview | 概要
 Name: SpatialDistortion<br>
-Version: 0.0.1-exp.1<br>
+Version: 1.0.0-exp.1<br>
 
 GrabPassを利用した様々な揺らぎを表現するシェーダーです。
 <br>
@@ -66,8 +66,7 @@ GrabPass{
 
 ## Installation instructions | インストール方法
 ### VPM - ***推奨***
-[Package Listing WEB](https://r-delta-c.github.io/vpm_repository/)へ移動し、**Add to VCC**というボタンを押して、VRChat Creator Companionを開きます。<br>
-リポジトリを加えましたら、導入したいプロジェクトのManage Packagesを開き、一覧に加わっているMeshHologramをインストールしてください。
+[Package Listing WEB](https://r-delta-c.github.io/vpm_repository/)へ移動し、**Add to VCC**というボタンを押して、VRChat Creator Companionからパッケージをインポートしてください。
 
 ### Package Manager - ***推奨***
 Unityのタブメニューから、**Window -> Package Manager**を押してPackage Managerを開きます。<br>
